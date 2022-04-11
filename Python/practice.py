@@ -158,3 +158,33 @@ checkPrime(10000)
 1229
 checkPrime(100000)
 9592
+
+
+#BANK PROBLEM
+def accounts():
+    age = int(input('Enter you age: '))
+    dep = int(input('Enter deposite amount: '))
+    if( dep >= 100 ):
+        if( age >= 21 ):
+            return 'TYPE A'
+        return "TYPE B"
+    else:
+        if( age >= 21):
+            return 'TYPE C'
+        return 'DO NOT DEPOSITE'
+accounts()
+Enter you age: 30
+Enter deposite amount: 100
+'TYPE A'
+accounts()
+Enter you age: 16
+Enter deposite amount: 200
+'TYPE B'
+accounts()
+Enter you age: 18
+Enter deposite amount: 90
+'DO NOT DEPOSITE'
+accounts()
+Enter you age: 26
+Enter deposite amount: 80
+'TYPE C'
