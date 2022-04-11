@@ -172,6 +172,7 @@ def accounts():
         if( age >= 21):
             return 'TYPE C'
         return 'DO NOT DEPOSITE'
+    
 accounts()
 Enter you age: 30
 Enter deposite amount: 100
