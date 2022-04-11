@@ -162,7 +162,7 @@ checkPrime(100000)
 
 #BANK PROBLEM
 def accounts():
-    age = int(input('Enter you age: '))
+    age = int(input('Enter your age: '))
     dep = int(input('Enter deposite amount: '))
     if( dep >= 100 ):
         if( age >= 21 ):
