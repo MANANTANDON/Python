@@ -189,3 +189,36 @@ accounts()
 Enter you age: 26
 Enter deposite amount: 80
 'TYPE C'
+
+#CLIENTS EXAMPLE
+def clients():
+    gender = str(input('Enter you gender(m - male, f - female): '))
+    city = str(input('Do you live in city(y/n):'))
+    age = int(input('Enter your age: '))
+    ch = ''
+    if(age in range(0, 31)):
+        ch = 'a'
+    elif(age in range(30, 61)):
+        ch = 'b'
+    else:
+        ch = 'c'
+
+    if(gender == 'f'):
+        if(city == 'y'):
+            if(ch == 'a'):
+                return 'PRODUCT X, PRODUCT Z, PRODUCT w'
+            elif( ch == 'b'):
+                return 'PRODUCT W, PRODUCT Z'
+            return 'PRODUCT W'
+        else:
+            if( ch == 'a'):
+                return 'PRODUCT X, PRODUCT Z'
+            elif(ch == 'c'):
+                return 'NO PRODUCTS FOR YOU'
+        return 'PRODUCT Z'
+    else:
+        if(gender == 'm'):
+            if(city == 'n'):
+                if(ch == 'b'):
+                    return 'PRODUCT Y, PRODUCT Z'
+        return 'PRODUCT Z'
