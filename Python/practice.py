@@ -222,3 +222,49 @@ def clients():
                 if(ch == 'b'):
                     return 'PRODUCT Y, PRODUCT Z'
         return 'PRODUCT Z'
+    
+    
+    
+# In a predetermined two-dimensional integer array (square matrix) matrix insert 0 into 
+# elements to the left side of the main diagonal, and 1 into elements to the right side of the diagonal.
+def swapUpperToLower(arr):
+    n = 4;
+    for i in range(0, n):
+        for j in range(i + 1, n):
+            arr[i][j] = 1
+            arr[j][i] = 0
+
+    for i in range(0, n):
+        for j in range(0, n):
+            print(arr[i][j], end = " ");
+        print(" ");
+
+        
+arr=[[2,4,3,3],[5,7,8,5],[2,4,3,3],[5,7,8,5]]
+swapUpperToLower(arr);
+2 1 1 1  
+0 7 1 1  
+0 0 3 1  
+0 0 0 5
+
+
+# In a given array of integers nums swap values of the first and the last array elements, 
+# the second and the penultimate etc., if the two exchanged values are even
+def swaplastDigits(num):
+    if (num[0]%2 == 0 and num[-1]%2==0):
+        if num[0] == num[-1]:
+            temp = num[1]
+            num[1] = num[-1]
+            num[-1] = temp
+            return num
+        temp = num[0]
+        num[0] = num[-1]
+        num[-1] = temp
+    return num
+
+swaplastDigits([10,5,3,4])
+[4, 5, 3, 10]
+swaplastDigits([10,2,3,4,5])
+[10, 2, 3, 4, 5]
+swaplastDigits([100,2,3,45,33,8,4,54])
+[54, 2, 3, 45, 33, 8, 4, 100]
